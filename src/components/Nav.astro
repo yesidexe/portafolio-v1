@@ -1,0 +1,21 @@
+---
+import { navItems } from '../data/navItems'
+import { MenuIcon } from '../icons';
+---
+<nav class="relative flex justify-between h-full w-[90%] md:w-[60%] m-auto">
+    <span class="md:hidden h-full grid place-content-center">
+        <MenuIcon className="w-6 text-zinc-300"/>
+    </span>
+    <a href="#home" class="hover:text-rose-500 duration-300 text-zinc-300 text-base lg:text-lg font-medium px-3 grid place-content-center h-full">Yesid</a>
+    <ul class="
+    md:flex md:static md:bg-transparent md:rounded-none md:w-fit
+    absolute top-11 -left-[5.5%] w-1/2 bg-zinc-800 rounded-br-md">
+        {
+            navItems.map((navItem)=>{
+                return <li><a class="text-zinc-300 duration-300 grid place-content-center h-full text-sm py-4  
+                lg:text-base md:py-0 md:px-3" 
+                href={navItem.url}>{navItem.title}</a></li>
+            })
+        }
+    </ul>
+</nav>

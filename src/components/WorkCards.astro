@@ -1,0 +1,27 @@
+---
+import { ExternalLinkIcon, GithubIcon } from '../icons';
+
+export interface Props{
+	src:string;
+    title:string;
+}
+
+const {src,title} = Astro.props;
+---
+
+<div class="h-full w-full group/div relative aspect-video overflow-hidden rounded-sm">
+    <img class="group-hover/div:opacity-30 opacity-90 duration-300 object-cover" height="100%" width="100%" src={src} alt="">   
+
+    <div class="overflow-hidden px-4 pb-2 sm:px-5 sm:pb-3 w-full absolute bottom-0 flex flex-col gap-2">
+        <h3 class="text-zinc-300 text-lg sm:text-xl translate-y-[+38px] group-hover/div:translate-y-0 duration-300 will-change-transform">{title}</h3>
+        <div class="justify-between flex translate-y-6 opacity-0 group-hover/div:opacity-100 group-hover/div:translate-y-0 duration-300 will-change-transform">
+            <div class="flex gap-3">
+                <slot />
+            </div>
+            <div class="flex gap-3">                            
+                <ExternalLinkIcon className="w-6 h-6 sm:w-7 sm:h-7 text-zinc-300 hover:bg-rose-600 hover:rounded-full hover:text-zinc-50 hover:p-1 duration-300"/>
+                <GithubIcon className="text-zinc-300 w-6 h-6 sm:w-7 sm:h-7 hover:bg-zinc-300 hover:rounded-full hover:text-zinc-950 hover:p-1 duration-300"/>
+            </div>                        
+        </div>  
+    </div> 
+</div>

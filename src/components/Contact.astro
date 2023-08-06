@@ -1,0 +1,38 @@
+---
+import { MailIcon,LocationIcon,LinkedInIcon,GithubIcon } from "../icons";
+import Form from './Form.astro'
+
+---
+
+<section id="contact" class="bg-gradient-to-t from-zinc-950 to-rose-950/10 h-screen w-full pt-14 flex">
+    <div class="w-[90%] md:w-[60%] m-auto flex-col gap-10 flex items-center">                  
+        <div class="gap-10 w-full flex flex-wrap justify-between">
+            <div class="flex flex-col gap-10">
+                <h2 class="text-4xl md:text-5xl font-medium bg-gradient-to-l  from-rose-500 to-rose-900 text-transparent bg-clip-text">Contactame!</h2>
+
+                <div class="gap-2 flex-col flex">                    
+                    <span class="text-sm md:text-base flex gap-3 text-zinc-300 items-center">
+                    <MailIcon className="w-5 md:w-6 text-zinc-300"/>
+                    davidjuradoyt@gmail.com
+                    </span>
+                    <span class="text-sm md:text-base flex gap-3 text-zinc-300 items-center">
+                    <LocationIcon className="w-5 md:w-6 text-zinc-300"/>
+                    Colombia
+                    </span>                    
+                </div>
+
+                <div class="flex gap-3 items-center">
+                    <a href="https://www.linkedin.com/in/yesid-jurado/" target="_blank">
+                        <LinkedInIcon className="w-6 md:w-6 text-zinc-300 hover:rounded-sm hover:bg-[#0A66C2]  hover:p-1 duration-300"/>
+                    </a>
+                    <a href="https://github.com/yesidexe" target="_blank">
+                        <GithubIcon className="hover:bg-zinc-300 hover:text-zinc-950 hover:rounded-full hover:p-1 w-6 md:w-7 text-zinc-300 duration-300"/>
+                    </a>     
+                </div>  
+
+            </div>
+
+            <Form/>
+        </div>
+    </div>    
+</section>

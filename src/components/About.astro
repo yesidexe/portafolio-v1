@@ -1,0 +1,23 @@
+---
+import {UserCircleIcon} from '../icons'
+import '../styles/borderEffect.css'
+import Skills from './Skills.astro'
+---
+
+<section id="about" class="bg-gradient-to-t from-zinc-950 to-rose-950/10 pt-14 h-screen w-full flex">
+    <div class="w-[90%] md:w-[60%] m-auto flex flex-col gap-10">
+
+        <h2 class="inline-block text-4xl md:text-5xl font-medium bg-gradient-to-l  from-rose-500 to-rose-900 text-transparent bg-clip-text">Sobre mi</h2>
+
+        <div class="w-full flex items-center justify-between gap-5">
+            <div class="text-sm md:text-base flex flex-col gap-4">
+                <p class="text-zinc-300">Hi! My name is <span class="font-semibold">Yesid</span>, but you can call me, <span class="font-semibold">Ye</span>. Soy un web developer con más de un año de experiencia estudiando y 4 meses de experiencia laboral en una pasantía de la Universidad, especificamente estudié en las Unidades Tecnológicas de Santander en Colombia.</p>
+                <p class="text-zinc-300">Soy bastante autodidacta, me gusta aprender por mi cuenta todo lo que esté a mi alcance, ya que la mayoria de mi aprendizaje ha sido por mi cuenta, cosa de lo que estoy orgulloso.</p>
+            </div>     
+        </div>    
+        <div class="flex flex-col gap-8">
+            <span class="text-zinc-300 text-xl md:text-2xl font-medium">¿Qué tecnologias uso?</span>    
+            <Skills/> 
+        </div>                     
+    </div>
+</section>

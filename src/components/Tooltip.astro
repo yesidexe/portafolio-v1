@@ -1,0 +1,13 @@
+---
+import '../styles/tooltip.css'
+
+export interface Props{
+	toolName:string;
+}
+
+const {toolName} = Astro.props;
+---
+
+<span data-tooltip={toolName} data-tooltip-location="bottom">
+    <slot />
+</span>

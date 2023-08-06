@@ -1,0 +1,47 @@
+/*button*/
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --clr-3: #f43f5e;
+    --clr-4: #4c0519;
+    --clr-5: #09090b;    
+}
+
+.card {
+    border-radius: 0.5rem;
+    position: relative;   
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    z-index: -1;
+    background: conic-gradient(from var(--gradient-angle),
+            var(--clr-3),
+            var(--clr-4),
+            var(--clr-5),
+            var(--clr-4),
+            var(--clr-3));
+    border-radius: inherit;
+    animation: rotation 8s linear infinite;
+}
+
+.card::after {
+    filter: blur(56px);
+}
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: 0deg;
+    }
+
+    100% {
+        --gradient-angle: 360deg;
+    }
+}

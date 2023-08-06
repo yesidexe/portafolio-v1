@@ -1,0 +1,54 @@
+---
+import {TypeScriptIcon,TailwindIcon,ReactIcon, PostgresqlIcon,NodejsIcon,NextjsIcon,AstroIcon, NestjsIcon,ExpressIcon, MongoIcon, JavaScriptIcon} from '../icons'
+import Tooltip from './Tooltip.astro';
+---
+
+<div class="m-auto w-[90%] sm:w-full flex gap-x-10 gap-y-12 items-center justify-around flex-wrap">
+    <Tooltip toolName="React">
+        <ReactIcon 
+            className='duration-300 hover:text-[#00D8FF] text-zinc-300 w-8 lg:w-10'/>
+    </Tooltip>
+
+    <Tooltip toolName="TailwindCSS">
+        <TailwindIcon className='w-8 lg:w-10 duration-300 hover:text-[#44a8b3] text-zinc-300'/>
+    </Tooltip>
+
+    <Tooltip toolName="Nextjs">
+        <NextjsIcon className='w-8 lg:w-10 hover:bg-zinc-300 hover:border rounded-full duration-300 hover:text-black text-zinc-300'/>                
+    </Tooltip>
+
+    <Tooltip toolName="Astro">
+        <AstroIcon className='w-8 lg:w-10 duration-300 hover:text-[#ff5d01] text-zinc-300'/>
+    </Tooltip>
+
+    <Tooltip toolName="Javascript">
+        <JavaScriptIcon className="w-8 lg:w-10 hover:bg-zinc-950 duration-300 hover:text-[#F7DF1E] text-zinc-300"/>
+    </Tooltip>
+
+    <Tooltip toolName="Typescript">
+        <TypeScriptIcon className="hover:bg-white duration-300 hover:text-[#007ACC] text-zinc-300 w-8 lg:w-10"/> 
+    </Tooltip>
+
+    <Tooltip toolName="PostgreSQL">
+        <PostgresqlIcon className='w-8 lg:w-10 duration-300 hover:text-[#336791] text-zinc-300'/>
+    </Tooltip>
+
+    <!-- 
+    <Tooltip toolName="Nodejs">
+        <NodejsIcon width={40}/>
+    </Tooltip>
+
+    <Tooltip toolName="Nestjs">
+        <NestjsIcon  width={40}/>
+    </Tooltip>
+
+    <Tooltip toolName="Expressjs">
+        <ExpressIcon width={40}/>
+    </Tooltip>
+
+    <Tooltip toolName="MongoDB">
+        <MongoIcon  width={40}/>
+    </Tooltip>
+    -->    
+</div>  
+
