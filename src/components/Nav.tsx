@@ -5,12 +5,10 @@ import { MenuIcon } from '../icons';
 export const Nav = () => {
     const [isActive, setIsActive] = useState(false)
 
-    console.log(isActive)
-
     return (
         <nav className="relative flex justify-between h-full w-[90%] md:w-[60%] m-auto">
             <span onClick={() => setIsActive(!isActive)} 
-            className="select-none cursor-pointer md:hidden h-full grid place-content-center">
+            className="cursor-pointer md:hidden h-full grid place-content-center">
                 <MenuIcon className={`${isActive ? "bg-rose-600 w-7 h-7 p-1 text-zinc-900" : "w-6 h-6"} duration-300  rounded-full  text-zinc-300`} />
             </span>
             <a href="#home" className="hover:text-rose-500 duration-300 text-zinc-300 text-base lg:text-lg font-medium px-3 grid place-content-center h-full">Yesid</a>
