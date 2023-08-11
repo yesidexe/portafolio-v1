@@ -4,12 +4,13 @@ import { ExternalLinkIcon, GithubIcon } from '../icons';
 export interface Props{
 	src:string;
     title:string;
+    addClass: string;
 }
 
-const {src,title} = Astro.props;
+const {src,title,addClass} = Astro.props;
 ---
 
-<div class="h-full w-full group/div relative aspect-video overflow-hidden rounded-sm">
+<div class={`${addClass} h-full w-full group/div relative aspect-video overflow-hidden rounded-sm`}>
     <img class="group-hover/div:opacity-30 opacity-90 duration-300 object-cover" height="100%" width="100%" src={src} alt="">   
 
     <div class="overflow-hidden px-4 pb-2 sm:px-5 sm:pb-3 w-full absolute bottom-0 flex flex-col gap-2">

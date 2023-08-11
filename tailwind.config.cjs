@@ -4,7 +4,10 @@ const plugin = require("tailwindcss/plugin")
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {		
+		extend: {	
+			screens:{
+				'workCards':'672px'
+			},	
 			keyframes: {
 				right: {
 					'0%, 100%':{transform: 'translateX(-25%)',animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'},
