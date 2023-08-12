@@ -14,9 +14,9 @@ export const Nav = () => {
             <a href="#home" className="hover:text-rose-500 duration-300 text-zinc-300 text-base lg:text-lg font-medium px-3 grid place-content-center h-full">Yesid</a>
 
             <ul className={`   
-                ${isActive === true ? "w-1/2" : 'w-0 -left-1/2'}             
+                ${isActive === true ? "w-1/2 -left-[5.5%]" : 'w-0 -left-1/2'}             
                 md:flex md:static md:bg-transparent md:rounded-none md:w-fit
-                absolute top-11 -left-[5.5%] bg-zinc-900 rounded-br-md duration-300 will-change-auto overflow-hidden`}>
+                absolute top-11 bg-zinc-900 rounded-br-md duration-300 will-change-auto overflow-hidden`}>
                 {
                     navItems.map((navItem) => {
                         return (
