@@ -5,9 +5,11 @@ export interface Props{
 	src:string;
     title:string;
     addClass: string;
+    rep: string;
+    dep: string;
 }
 
-const {src,title,addClass} = Astro.props;
+const {src,title,addClass,rep,dep} = Astro.props;
 ---
 
 <div class={`${addClass} h-full w-full group/div relative aspect-video overflow-hidden rounded-sm`}>
@@ -19,9 +21,13 @@ const {src,title,addClass} = Astro.props;
             <div class="flex gap-3">
                 <slot />
             </div>
-            <div class="flex gap-3">                            
-                <ExternalLinkIcon className="w-6 h-6 sm:w-7 sm:h-7 text-zinc-300 hover:bg-rose-600 hover:rounded-full hover:text-zinc-50 hover:p-1 duration-300"/>
-                <GithubIcon className="text-zinc-300 w-6 h-6 sm:w-7 sm:h-7 hover:bg-zinc-300 hover:rounded-full hover:text-zinc-950 hover:p-1 duration-300"/>
+            <div class="flex gap-3">
+                <a href={dep} target="_blank">
+                    <ExternalLinkIcon className="w-6 h-6 sm:w-7 sm:h-7 text-zinc-300 hover:bg-rose-600 hover:rounded-full hover:text-zinc-50 hover:p-1 duration-300"/>
+                </a>    
+                <a href={rep} target="_blank">
+                    <GithubIcon className="text-zinc-300 w-6 h-6 sm:w-7 sm:h-7 hover:bg-zinc-300 hover:rounded-full hover:text-zinc-950 hover:p-1 duration-300"/>
+                </a>       
             </div>                        
         </div>  
     </div> 
