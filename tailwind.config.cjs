@@ -20,6 +20,9 @@ module.exports = {
 			fontSize: {
 				clamp: "clamp(1rem, 5vw, 3rem)",
 			},
+		},
+		fontFamily: {
+			'poppins': ['Poppins', 'sans-serif']
 		}
 	},
 	plugins: [],
